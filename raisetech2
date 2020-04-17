@@ -1,0 +1,62 @@
+greeting = "Hello World!"
+puts greeting
+
+numbers = (1..10)
+numbers.each do |number|
+  puts number
+end
+
+def boolean(arg)
+  if arg == 0
+    puts false
+  elsif arg == 1
+    puts true
+  end
+end
+boolean(1)
+
+array=["raisetech","techcamp","samurai","progate"]
+puts array[0]
+
+class Communication
+  def office(employee)
+    if employee ==0
+      puts "おはようございます！"
+    elsif employee==1
+      puts "おはよう！"
+    elsif employee==2
+      puts "おっす！"
+    else
+      puts "お世話になっております。"
+    end
+  end
+end
+
+puts "相手が話しかけてきた！(0:上司,1:同僚,2:後輩)"
+oficer = gets.chomp.to_i
+communication = Communication.new
+communication.office(oficer)
+
+def greet(hello)
+  puts hello
+end
+greet("Hello")
+
+class WorkplaceCommunication < Communication
+end
+
+def Is_this_a_workplace?
+  puts "あなたは職場にいますか？(0: Yes, 1:No)"
+  puts "(数値で入力してください。)"
+  worker = gets.chomp.to_i
+  if worker == 0
+    puts "Hello"
+  elsif worker<0 or worker>1
+    puts false
+  else
+    puts false
+  end
+end
+Is_this_a_workplace?
+
+
